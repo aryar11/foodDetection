@@ -10,7 +10,41 @@ cap.set(4, 480)
 model = YOLO('runs/detect/yolo8-combined-dataset/weights/best.pt')
 
 # object classes
-classNames =  ['avocado', 'beans', 'beet', 'bell pepper', 'broccoli', 'brus capusta', 'cabbage', 'carrot', 'cayliflower', 'celery', 'corn', 'cucumber', 'eggplant', 'fasol', 'garlic', 'hot pepper', 'onion', 'peas', 'potato', 'pumpkin', 'rediska', 'redka', 'salad', 'squash-patisson', 'tomato', 'vegetable marrow', 'bean sprouts', 'beef', 'cheese', 'chicken', 'chili', 'daikon', 'egg', 'egg plant', 'green onion', 'ham', 'kimchi', 'lettuce', 'mushroom', 'paprika', 'pork belly', 'rice', 'sausage', 'spinach', 'sweet potato', 'tofu', 'zucchini']
+classNames =  ['avocado', 
+               'beans', 
+               'beet', 
+               'bell pepper', 
+               'broccoli', 
+               'brus capusta',
+                'cabbage', 
+                'carrot', 
+                'cayliflower', 
+                'celery', 
+                'corn', 
+                'cucumber', 
+                'eggplant', 
+                'fasol', 
+                'garlic', 
+                'hot pepper', 
+                'onion', 
+                'peas', 
+                'potato', 
+                'pumpkin', 
+                'rediska', 
+                'redka', 
+                'salad', 
+                'squash-patisson', 
+                'tomato', 
+                'vegetable marrow', 
+                'bean sprouts', 
+                'beef', 
+                'cheese', 
+                'chicken', 
+                'chili', 
+                'daikon', 
+                'egg', 
+                'egg plant', 
+                'green onion', 'ham', 'kimchi', 'lettuce', 'mushroom', 'paprika', 'pork belly', 'rice', 'sausage', 'spinach', 'sweet potato', 'tofu', 'zucchini']
 
 
 while True:

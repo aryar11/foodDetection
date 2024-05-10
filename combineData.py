@@ -8,13 +8,13 @@ def ensure_dir(path):
         os.makedirs(path)
 
 # Paths for the datasets
-dataset1_path = 'C:\\Users\\Arya Rahmanian\\Documents\\foodDetection\\data\\vegetables'
-dataset2_path = 'C:\\Users\\Arya Rahmanian\\Documents\\foodDetection\\data\\food_ingredients'
-combined_path = 'C:\\Users\\Arya Rahmanian\\Documents\\foodDetection\\data\\combined'
+dataset2_path = r'C:\Users\Arya Rahmanian\Documents\foodDetection\data\utensils'
+dataset1_path = 'C:\\Users\\Arya Rahmanian\\Documents\\foodDetection\\data\\combined'
+combined_path = 'C:\\Users\\Arya Rahmanian\\Documents\\foodDetection\\data\\combined-utensils'
 
 # Class lists from both datasets
-classes1 = ['avocado', 'beans', 'beet', 'bell pepper', 'broccoli', 'brus capusta', 'cabbage', 'carrot', 'cayliflower', 'celery', 'corn', 'cucumber', 'eggplant', 'fasol', 'garlic', 'hot pepper', 'onion', 'peas', 'potato', 'pumpkin', 'rediska', 'redka', 'salad', 'squash-patisson', 'tomato', 'vegetable marrow']
-classes2 = ['avocado', 'bean sprouts', 'beef', 'broccoli', 'cabbage', 'carrot', 'cheese', 'chicken', 'chili', 'cucumber', 'daikon', 'egg', 'egg plant', 'garlic', 'green onion', 'ham', 'kimchi', 'lettuce', 'mushroom', 'onion', 'paprika', 'pork belly', 'potato', 'rice', 'sausage', 'spinach', 'sweet potato', 'tofu', 'tomato', 'zucchini']
+classes1 = ['avocado', 'beans', 'beet', 'bell pepper', 'broccoli', 'brus capusta', 'cabbage', 'carrot', 'cayliflower', 'celery', 'corn', 'cucumber', 'eggplant', 'fasol', 'garlic', 'hot pepper', 'onion', 'peas', 'potato', 'pumpkin', 'rediska', 'redka', 'salad', 'squash-patisson', 'tomato', 'vegetable marrow', 'bean sprouts', 'beef', 'cheese', 'chicken', 'chili', 'daikon', 'egg', 'egg plant', 'green onion', 'ham', 'kimchi', 'lettuce', 'mushroom', 'paprika', 'pork belly', 'rice', 'sausage', 'spinach', 'sweet potato', 'tofu', 'zucchini']
+classes2 = ['Can_opener', 'bottle_opener', 'fork', 'knife', 'pizza_cutter', 'spatula', 'spoon', 'tongs', 'whisk']
 
 # Creating a unified class list
 all_classes = list(OrderedDict.fromkeys(classes1 + classes2))
@@ -52,7 +52,6 @@ copy_and_rename_files(os.path.join(dataset1_path, 'train', 'images'), os.path.jo
 copy_and_rename_files(os.path.join(dataset1_path, 'train', 'labels'), os.path.join(combined_path, 'train', 'labels'), 'veg', is_label=True)
 copy_and_rename_files(os.path.join(dataset2_path, 'train', 'images'), os.path.join(combined_path, 'train', 'images'), 'ing')
 copy_and_rename_files(os.path.join(dataset2_path, 'train', 'labels'), os.path.join(combined_path, 'train', 'labels'), 'ing', is_label=True)
-
 
 copy_and_rename_files(os.path.join(dataset1_path, 'valid', 'images'), os.path.join(combined_path, 'valid', 'images'), 'veg')
 copy_and_rename_files(os.path.join(dataset1_path, 'valid', 'labels'), os.path.join(combined_path, 'valid', 'labels'), 'veg', is_label=True)
